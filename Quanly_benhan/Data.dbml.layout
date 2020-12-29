@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Data">
+  <DataContextMoniker Name="/DataDataContext" />
+  <nestedChildShapes>
+    <classShape Id="6bf88df0-6ec9-471c-94eb-25e21b348efd" absoluteBounds="6.75, 4.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DataDataContext/Admin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b63e9fb0-6381-4aef-8983-b0dbfc5a419c" absoluteBounds="6.765, 5.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2ef46e64-ef93-4315-8137-0129f5730f33" absoluteBounds="3.5, 1, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/DataDataContext/BacSi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9b1d90a9-8e1d-458c-b25f-85c279236137" absoluteBounds="3.515, 1.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ac8c1def-d8d3-4871-833e-18fd456f0433" absoluteBounds="6.25, 1, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/DataDataContext/BenhAn" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f13d67df-a5e1-4164-8e2a-74952b398b65" absoluteBounds="6.265, 1.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="78001ae3-262c-455b-aece-3076b193ed25" absoluteBounds="3.5, 5, 2, 2.3478011067708326">
+      <DataClassMoniker Name="/DataDataContext/BenhNhan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="83fa5a71-7a16-489d-afa7-6ca3b0b99e6d" absoluteBounds="3.515, 5.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="17806aa8-48d3-4e76-a7a1-1cb790248b21" absoluteBounds="0.75, 1.5, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DataDataContext/Khoa" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8fe300ec-68cd-4c7e-a0f8-e5b9ff321a00" absoluteBounds="0.765, 1.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 2.17390055338542); (6.25 : 2.17390055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataDataContext/BacSi/BacSi_BenhAn" />
+      <nodes>
+        <classShapeMoniker Id="2ef46e64-ef93-4315-8137-0129f5730f33" />
+        <classShapeMoniker Id="ac8c1def-d8d3-4871-833e-18fd456f0433" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.67714680989583); (6.46875 : 6.67714680989583); (6.46875 : 3.34780110677083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataDataContext/BenhNhan/BenhNhan_BenhAn" />
+      <nodes>
+        <classShapeMoniker Id="78001ae3-262c-455b-aece-3076b193ed25" />
+        <classShapeMoniker Id="ac8c1def-d8d3-4871-833e-18fd456f0433" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.09699625651042); (3.5 : 2.09699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataDataContext/Khoa/Khoa_BacSi" />
+      <nodes>
+        <classShapeMoniker Id="17806aa8-48d3-4e76-a7a1-1cb790248b21" />
+        <classShapeMoniker Id="2ef46e64-ef93-4315-8137-0129f5730f33" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

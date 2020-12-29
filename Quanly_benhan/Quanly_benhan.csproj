@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{579FA24B-705B-4E75-A176-CBB41584BC8D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Quanly_benhan</RootNamespace>
+    <AssemblyName>Quanly_benhan</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Data.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Form_QuanLyAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Form_QuanLyAdmin.Designer.cs">
+      <DependentUpon>Form_QuanLyAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BacSi\Form_BacSi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BacSi\Form_BacSi.Designer.cs">
+      <DependentUpon>Form_BacSi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Form_QuanlyBacSi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Form_QuanlyBacSi.Designer.cs">
+      <DependentUpon>Form_QuanlyBacSi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BacSi\Form_QuanLyBenhAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BacSi\Form_QuanLyBenhAn.Designer.cs">
+      <DependentUpon>Form_QuanLyBenhAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BenhNhan\Form_BenhNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BenhNhan\Form_BenhNhan.Designer.cs">
+      <DependentUpon>Form_BenhNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Login.Designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Form_QuanlyKhoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Form_QuanlyKhoa.Designer.cs">
+      <DependentUpon>Form_QuanlyKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BacSi\Form_QuanlyBenhNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BacSi\Form_QuanlyBenhNhan.Designer.cs">
+      <DependentUpon>Form_QuanlyBenhNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BacSi\Form_XemBenhAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BacSi\Form_XemBenhAn.Designer.cs">
+      <DependentUpon>Form_XemBenhAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Data.dbml.layout">
+      <DependentUpon>Data.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Admin\FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Form_QuanLyAdmin.resx">
+      <DependentUpon>Form_QuanLyAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BacSi\Form_BacSi.resx">
+      <DependentUpon>Form_BacSi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Form_QuanlyBacSi.resx">
+      <DependentUpon>Form_QuanlyBacSi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BacSi\Form_QuanLyBenhAn.resx">
+      <DependentUpon>Form_QuanLyBenhAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BenhNhan\Form_BenhNhan.resx">
+      <DependentUpon>Form_BenhNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Form_QuanlyKhoa.resx">
+      <DependentUpon>Form_QuanlyKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BacSi\Form_QuanlyBenhNhan.resx">
+      <DependentUpon>Form_QuanlyBenhNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BacSi\Form_XemBenhAn.resx">
+      <DependentUpon>Form_XemBenhAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Data.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Data.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\image\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

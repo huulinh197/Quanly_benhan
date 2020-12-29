@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLBenhAn" Class="DataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=VIP-PC\SQLEXPRESS;Initial Catalog=QLBenhAn;Integrated Security=True" SettingsObjectName="Quanly_benhan.Properties.Settings" SettingsPropertyName="QLBenhAnConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Admin" Member="Admins">
+    <Type Name="Admin">
+      <Column Name="TaiKhoan" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MK" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BacSi" Member="BacSis">
+    <Type Name="BacSi">
+      <Column Name="MaBacSi" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenBacSi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Email" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MK" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaKhoa" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="BacSi_BenhAn" Member="BenhAns" ThisKey="MaBacSi" OtherKey="MaBacSi" Type="BenhAn" />
+      <Association Name="Khoa_BacSi" Member="Khoa" ThisKey="MaKhoa" OtherKey="MaKhoa" Type="Khoa" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BenhAn" Member="BenhAns">
+    <Type Name="BenhAn">
+      <Column Name="MaBenhAn" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CCCD" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NgayVaoVien" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NgayRaVien" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ChanDoanLucVaoVien" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ChanDoanLucRaVien" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PhuongAnDieuTri" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaBacSi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="BacSi_BenhAn" Member="BacSi" ThisKey="MaBacSi" OtherKey="MaBacSi" Type="BacSi" IsForeignKey="true" />
+      <Association Name="BenhNhan_BenhAn" Member="BenhNhan" ThisKey="CCCD" OtherKey="CCCD" Type="BenhNhan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BenhNhan" Member="BenhNhans">
+    <Type Name="BenhNhan">
+      <Column Name="CCCD" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MK" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HoTen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MaBHYT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SDT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="BenhNhan_BenhAn" Member="BenhAns" ThisKey="CCCD" OtherKey="CCCD" Type="BenhAn" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Khoa" Member="Khoas">
+    <Type Name="Khoa">
+      <Column Name="MaKhoa" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenKhoa" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Khoa_BacSi" Member="BacSis" ThisKey="MaKhoa" OtherKey="MaKhoa" Type="BacSi" />
+    </Type>
+  </Table>
+</Database>
